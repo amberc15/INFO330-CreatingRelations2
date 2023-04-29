@@ -45,7 +45,7 @@ height_m, hp, name, percentage_male, pokedex_number, sp_attack, sp_defense,
 speed, type1, type2, weight_kg, generation, is_legendary, split_value
 FROM new_cleaned;
 
-SELECT * FROM new_table;
+
 
 
 

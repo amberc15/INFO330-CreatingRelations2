@@ -1,5 +1,3 @@
-SELECT * FROM new_table;
-
 -- this code creates a new table with a unique abilities column
 CREATE TABLE dependencies AS SELECT 
 DISTINCT split_value FROM split_abilities;
@@ -13,5 +11,9 @@ new_abilities TEXT);
 insert into new_dependencies(new_abilities)
 SELECT * FROM new_dependencies;
 
+--linking table 
+--new_dependencies and new_table 
+CREATE TABLE abilities_pokemon AS SELECT id, pokedex_number FROM new_dependencies JOIN new_table
+ON new_table.split_value = new_dependencies.new_abilities;
 
 
